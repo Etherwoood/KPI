@@ -31,9 +31,9 @@ public class UserAccount
         return games.GetLoses();
     }
     
-    public Game createGame(UserAccount opponent, int rating)
+    public Game createGame(UserAccount opponent, int rating, int id)
     {
-        return games.Create(this, opponent, rating);
+        return games.Create(this, opponent, rating, id);
     }
 
     public List<GameStats> GetGameStats()

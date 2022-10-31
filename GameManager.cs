@@ -7,7 +7,6 @@ namespace Lab1;
 public class GameManager
 {
     IDictionary<int, Game> store = new Dictionary<int, Game>();
-    private int lastId = 0;
     int defaultRating = 10;
     public List<GameStats> GetStats()
     {
@@ -41,9 +40,8 @@ public class GameManager
     }
     
     
-    public Game Create(UserAccount user, UserAccount opponent, int rating)
+    public Game Create(UserAccount user, UserAccount opponent, int rating, int id)
     {
-        int id = lastId++;
         Game game = new Game(id, user, opponent, rating);
         store.Add(id, game);
         return game;
